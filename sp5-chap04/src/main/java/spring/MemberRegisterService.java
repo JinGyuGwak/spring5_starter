@@ -1,23 +1,23 @@
 package spring;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
 import java.time.LocalDateTime;
 
-public class MemberRegisterService {
+import org.springframework.beans.factory.annotation.Autowired;
 
+public class MemberRegisterService {
     @Autowired
     private MemberDao memberDao;
 
-    public MemberRegisterService(){
+    public MemberRegisterService() {
+    }
 
+    public MemberRegisterService(MemberDao memberDao) {
+        this.memberDao = memberDao;
     }
-    public MemberRegisterService(MemberDao memberDao){
-        this.memberDao=memberDao;
-    }
-    public Long regist(RegisterRequest req){
+
+    public Long regist(RegisterRequest req) {
         Member member = memberDao.selectByEmail(req.getEmail());
-        if(member!=null){
+        if (member != null) {
             throw new DuplicateMemberException("dup email " + req.getEmail());
         }
         Member newMember = new Member(
