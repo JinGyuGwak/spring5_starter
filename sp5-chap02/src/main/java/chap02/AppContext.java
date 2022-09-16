@@ -2,7 +2,7 @@ package chap02;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-
+//커밋메시지수정
 @Configuration
 public class AppContext {
 
