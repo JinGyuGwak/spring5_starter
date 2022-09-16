@@ -8,8 +8,9 @@ import org.springframework.context.annotation.FilterType;
 import spring.*;
 
 @Configuration
-@ComponentScan(basePackages = {"spring"}) //어느 패키지에서 읽어올 것인지
-public class AppCtx {
+@ComponentScan(basePackages = {"spring"}, //어느 패키지에서 읽어올 것인지
+        excludeFilters = @ComponentScan.Filter(type = FilterType.REGEX, pattern = "spring\\..*DAO"))
+public class AppCtxWithExclude {
 
     @Bean
     @Qualifier("printer")
