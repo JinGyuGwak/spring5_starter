@@ -17,7 +17,7 @@ import spring.MemberRegisterService;
 import spring.RegisterRequest;
 import spring.VersionPrinter;
 import spring.WrongIdPasswordException;
-
+//커밋메시지수정
 public class MainForSpring {
 
     private static ApplicationContext ctx = null;
