@@ -6,7 +6,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.FilterType;
 import spring.*;
-
+//커밋메시지수정
 @Configuration
 @ComponentScan(basePackages = {"spring"}) //어느 패키지에서 읽어올 것인지
 public class AppCtx {
