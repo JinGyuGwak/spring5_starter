@@ -38,7 +38,7 @@ public class MemberDao {
 	}
 
 	public void insert(Member member) {
-		KeyHolder keyHolder = new GeneratedKeyHolder();
+		KeyHolder keyHolder = new GeneratedKeyHolder(); //GeneratedKeyHolder() 자동 생성된 키값을 구해주는 keyholder 구현 클래스임
 		jdbcTemplate.update(new PreparedStatementCreator() {
 			@Override
 			public PreparedStatement createPreparedStatement(Connection con)
