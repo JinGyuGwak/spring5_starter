@@ -23,7 +23,7 @@ public class AppCtx {
 
 	@Bean
 	public MemberDao memberDao() {
-		return new MemberDao();
+		return new MemberDao(dataSource());
 	}
 	
 	@Bean
