@@ -4,7 +4,6 @@ import org.apache.tomcat.jdbc.pool.DataSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import spring.*;
-
 @Configuration
 public class AppCtx {
 
