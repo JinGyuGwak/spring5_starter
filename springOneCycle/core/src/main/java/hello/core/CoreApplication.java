@@ -10,5 +10,4 @@ public class CoreApplication {
 		SpringApplication.run(CoreApplication.class, args);
 		System.out.println("==============실행되었습니다==============");
 	}
-
 }
