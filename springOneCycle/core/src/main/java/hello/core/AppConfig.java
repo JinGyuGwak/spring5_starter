@@ -3,6 +3,7 @@ package hello.core;
 import hello.core.discount.DiscountPolicy;
 import hello.core.discount.FixDiscountPolicy;
 import hello.core.discount.RateDiscountPolicy;
+import hello.core.member.MemberRepository;
 import hello.core.member.MemberService;
 import hello.core.member.MemberServiceImpl;
 import hello.core.member.MemoryMemberRepository;
@@ -15,17 +16,17 @@ import org.springframework.context.annotation.Configuration;
 public class AppConfig {
 
     @Bean
-    public MemberService memberService(){
+    public MemberService memberService(){ //객체가 추상화 클래스를 의존하게 한다
         return new MemberServiceImpl(memberRepository());
     }
 
     @Bean
-    public OrderService orderService(){
+    public OrderService orderService(){ //객체가 추상화 클래스를 의존하게 한다
         return new OrderServiceImpl(memberRepository(), discountPolicy());
     }
 
     @Bean
-    public MemoryMemberRepository memberRepository() {
+    public MemberRepository memberRepository() {
         return new MemoryMemberRepository();
     }
 
