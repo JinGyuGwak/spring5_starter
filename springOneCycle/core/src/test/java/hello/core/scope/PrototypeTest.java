@@ -24,6 +24,7 @@ public class PrototypeTest {
         Assertions.assertThat(protoBean1).isNotSameAs(protoBean2);
 
 
+
     }
     @Scope("prototype")
     static class Proto{
